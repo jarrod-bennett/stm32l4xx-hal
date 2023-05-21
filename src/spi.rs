@@ -191,7 +191,7 @@ macro_rules! hal {
                     // FRXTH: RXNE event is generated if the FIFO level is greater than or equal to
                     //        8-bit
                     spi.cr2
-                        .write(|w| unsafe { w.ds().bits(0b111).frxth().set_bit() });
+                        .modify(|_, w| unsafe { w.ds().bits(0b111).frxth().set_bit().rxneie().set_bit() });
 
                     // SPE: SPI enabled
                     spi.cr1.write(|w| w.spe().set_bit());
