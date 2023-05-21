@@ -1,4 +1,5 @@
 # `stm32l4xx-hal`
+Forked to overcome some limitations with the SPI setup.
 
 _formerly [MabezDev/stm32l4xx-hal](https://github.com/mabezdev/stm32l4xx-hal)_
 
